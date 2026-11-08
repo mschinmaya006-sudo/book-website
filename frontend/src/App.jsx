@@ -405,28 +405,84 @@ function App() {
   return (
     <div className="website">
 
-      <nav className="navbar">
-        <div className="logo">THE <span>FOLIÉ.</span></div>
+ <nav className="navbar">
+  <div className="logo">
+    <svg
+      width="38"
+      height="38"
+      viewBox="0 0 48 48"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Open magical book */}
+      <path
+        d="M24 38C18 32 10 31 5 33V10C12 8 19 11 24 16"
+        stroke="#B18A54"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
 
-        <div className="nav-links">
-          <a href="#home">Home</a>
-          <a href="#books">Explore Books</a>
-          <a href="#about">About Us</a>
-        </div>
+      <path
+        d="M24 38C30 32 38 31 43 33V10C36 8 29 11 24 16"
+        stroke="#B18A54"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
 
-        <div className="nav-buttons">
-          <button className="login-btn">Login</button>
-          <button className="signup-btn">Sign Up</button>
+      <path
+        d="M24 16V38"
+        stroke="#B18A54"
+        strokeWidth="1.5"
+      />
 
-          <button onClick={() => openPage("cart")} style={pageButtonStyle}>
-            Cart ({cart.length})
-          </button>
+      {/* Golden F */}
+      <path
+        d="M29 8H38M29 8V25M29 15H36"
+        stroke="#B18A54"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
 
-          <button onClick={() => openPage("wishlist")} style={pageButtonStyle}>
-            ♡ ({wishlist.length})
-          </button>
-        </div>
-      </nav>
+      {/* Magical sparkles */}
+      <path
+        d="M17 5V9M15 7H19M39 3V7M37 5H41"
+        stroke="#B18A54"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+      />
+    </svg>
+
+    <span>THE FOLIÉ.</span>
+  </div>
+
+  <div className="nav-links">
+    <a href="#home">Home</a>
+    <a href="#books">Explore Books</a>
+    <a href="#about">About Us</a>
+  </div>
+
+  <div className="nav-buttons">
+    <button className="login-btn">Login</button>
+    <button className="signup-btn">Sign Up</button>
+
+    <button
+      onClick={() => openPage("cart")}
+      style={pageButtonStyle}
+    >
+      Cart ({cart.length})
+    </button>
+
+    <button
+      onClick={() => openPage("wishlist")}
+      style={pageButtonStyle}
+    >
+      ♡ ({wishlist.length})
+    </button>
+  </div>
+</nav> 
 
       <section className="hero" id="home">
         <div className="hero-content">
