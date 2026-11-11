@@ -1,0 +1,284 @@
+
+.folie-features {
+  --ff-bg: #f8f4ef;
+  --ff-panel: #fffdf9;
+  --ff-text: #39252b;
+  --ff-muted: #806f70;
+  --ff-accent: #751f3d;
+  --ff-gold: #bd9654;
+  min-height: 100vh;
+  padding: 32px;
+  background: var(--ff-bg);
+  color: var(--ff-text);
+  font-family: Georgia, serif;
+}
+
+.folie-features.ff-dark {
+  --ff-bg: #21171d;
+  --ff-panel: #302129;
+  --ff-text: #f6e9df;
+  --ff-muted: #c2adb2;
+  --ff-accent: #d18aa3;
+  --ff-gold: #d7b36e;
+}
+
+.ff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.ff-header h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin: 8px 0;
+}
+
+.ff-header p,
+.ff-panel p {
+  line-height: 1.6;
+}
+
+.ff-kicker {
+  color: var(--ff-gold);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.ff-user {
+  color: var(--ff-gold);
+}
+
+.ff-back,
+.ff-tabs button,
+.ff-book button,
+.ff-panel button,
+.ff-challenge button {
+  cursor: pointer;
+  border: 1px solid var(--ff-gold);
+  border-radius: 8px;
+  padding: 10px 16px;
+  background: var(--ff-accent);
+  color: white;
+}
+
+.ff-back {
+  margin-bottom: 15px;
+}
+
+.ff-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+.ff-tabs button {
+  background: transparent;
+  color: var(--ff-text);
+}
+
+.ff-tabs button.active {
+  background: var(--ff-accent);
+  color: white;
+}
+
+.ff-panel {
+  background: var(--ff-panel);
+  border: 1px solid rgba(189, 150, 84, 0.35);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 25px rgba(30, 15, 20, 0.06);
+}
+
+.ff-panel h2 {
+  margin-top: 8px;
+  font-size: 25px;
+}
+
+.ff-panel input,
+.ff-panel select,
+.ff-panel textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #bda9a5;
+  border-radius: 7px;
+  background: var(--ff-bg);
+  color: var(--ff-text);
+  font: inherit;
+}
+
+.ff-panel textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.ff-filters,
+.ff-progress-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.ff-filters label,
+.ff-progress-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+}
+
+.ff-book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.ff-book {
+  display: flex;
+  gap: 14px;
+  padding: 12px;
+  border: 1px solid rgba(189, 150, 84, 0.3);
+  border-radius: 12px;
+  min-width: 0;
+}
+
+.ff-book img {
+  width: 90px;
+  height: 135px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ff-book h3 {
+  font-size: 17px;
+  margin: 7px 0;
+}
+
+.ff-book p,
+.ff-muted {
+  color: var(--ff-muted);
+  font-size: 13px;
+}
+
+.ff-book button {
+  padding: 8px 12px;
+}
+
+.ff-list {
+  margin-top: 20px;
+}
+
+.ff-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(189, 150, 84, 0.3);
+}
+
+.ff-danger {
+  background: #8d2938 !important;
+}
+
+.ff-message {
+  padding: 12px;
+  border-left: 4px solid var(--ff-gold);
+  background: var(--ff-panel);
+}
+
+.ff-post {
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(189, 150, 84, 0.3);
+}
+
+.ff-post-heading,
+.ff-reply-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ff-replies {
+  margin: 15px 0 15px 20px;
+  padding-left: 15px;
+  border-left: 2px solid var(--ff-gold);
+}
+
+.ff-replies p {
+  margin-top: 5px;
+}
+
+.ff-reply-form input {
+  flex: 1;
+}
+
+.ff-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.ff-challenge {
+  padding: 20px;
+  border: 1px solid var(--ff-gold);
+  border-radius: 12px;
+  background: var(--ff-bg);
+}
+
+.ff-badge {
+  color: var(--ff-gold);
+  font-size: 35px;
+}
+
+.ff-meter {
+  height: 9px;
+  background: rgba(189, 150, 84, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ff-meter span {
+  display: block;
+  height: 100%;
+  background: var(--ff-gold);
+}
+
+.ff-footer {
+  text-align: center;
+  color: var(--ff-muted);
+  padding: 30px 0;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .folie-features {
+    padding: 16px;
+  }
+
+  .ff-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ff-panel {
+    padding: 16px;
+  }
+
+  .ff-list-row,
+  .ff-post-heading,
+  .ff-reply-form {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
