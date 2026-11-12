@@ -1,3 +1,4 @@
+﻿
 import { useEffect, useState } from "react";
 import "./App.css";
 import AuthModal from "./AuthModal";
@@ -1093,7 +1094,6 @@ function App() {
     );
   }
 
-
   // MY ACCOUNT PAGE
   if (page === "account") {
     return (
@@ -1433,81 +1433,13 @@ function App() {
           <span>THE FOLIE.</span>
         </div>
 
+        <div className="nav-links">
+          <a href="#home">Home</a>
+          <a href="#books">Explore Books</a>
+          <a href="#about">About Us</a>
+        </div>
 
-<div className="nav-links">
-  <a href="#home">Home</a>
-  <a href="#books">Explore Books</a>
-  <a href="#about">About Us</a>
-</div>
-
-<div className="nav-buttons">
-  {currentUser ? (
-    <>
-      <span style={{ color: "#b18a54", marginRight: "10px" }}>
-        Hi, {currentUser.name}
-      </span>
-
-      <button className="login-btn" onClick={handleLogout}>
-        Logout
-      </button>
-    </>
-  ) : (
-    <>
-      <button
-        className="login-btn"
-        onClick={() => {
-          setAuthMode("login");
-          setAuthOpen(true);
-        }}
-      >
-        Login
-      </button>
-
-      <button
-        className="signup-btn"
-        onClick={() => {
-          setAuthMode("signup");
-          setAuthOpen(true);
-        }}
-      >
-        Sign Up
-      </button>
-    </>
-  )}
-
-  <button onClick={() => openPage("features")} style={pageButtonStyle}>
-    Reader Hub
-  </button>
-
-  <button onClick={() => openPage("account")} style={pageButtonStyle}>
-    My Account
-  </button>
-
-  <button onClick={() => openPage("cart")} style={pageButtonStyle}>
-    Cart ({cart.length})
-  </button>
-
-  <button onClick={() => openPage("wishlist")} style={pageButtonStyle}>
-    ♡ ({wishlist.length})
-  </button>
-
-  <button onClick={() => openPage("mybooks")} style={pageButtonStyle}>
-    My Books
-  </button>
-
-  <button onClick={() => openPage("orders")} style={pageButtonStyle}>
-    Orders
-  </button>
-
-  <button
-    onClick={() => setDarkMode(!darkMode)}
-    style={pageButtonStyle}
-  >
-    {darkMode ? "☀" : "☾"}
-  </button>
-</div>
-
-
+        {/* SINGLE NAVIGATION BUTTON GROUP - DUPLICATE REMOVED */}
         <div className="nav-buttons">
           {currentUser ? (
             <>
@@ -1542,6 +1474,10 @@ function App() {
               </button>
             </>
           )}
+
+          <button onClick={() => openPage("features")} style={pageButtonStyle}>
+            Reader Hub
+          </button>
 
           <button onClick={() => openPage("account")} style={pageButtonStyle}>
             My Account
